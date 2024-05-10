@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #e0dfdf;
+}
+
+.navbar {
+    background-color: #8d8d8d;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+    height: 60px;
+    display: flex;
+    margin-left: 10px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    opacity: 0.2;
+}
+
+.menu {
+    display: flex;
+    width: 20%;
+}
+
+.menu a {
+    color: #ffffff;
+    margin: 0 15px 0 15px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #000000;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account span {
+    color: #ffffff;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.profile:hover {
+    cursor: pointer;
+    opacity: 0.2;
+}
+.shelf-header{
+    display: flex;
+    font-size: 20px;
+    margin: 50px 30px;
+    letter-spacing: -1.5px;
+}
+.shelf-header :first-child{
+    color: #8d8d8d;
+}
+.shelf-header :last-child{
+    color: #30b19e;
+}
+.cards-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto 30px;
+    width: 20%;
+    height: auto;
+    border: 3px solid green;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
