@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>backoffice</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>backoffice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Product Form</h1>
-    <form id="product-form">
-      <label for="name">Name:</label>
-      <input type="text" class="name" name="name" required><br><br>
-  
-      <label for="description">Description:</label>
-      <textarea class="description" name="description" required></textarea><br><br>
-  
-      <label for="brand">Brand:</label>
-      <input type="text" class="brand" name="brand" required><br><br>
-  
-      <label for="imageUrl">Image URL:</label>
-      <input type="url" class="imageUrl" name="imageUrl" required><br><br>
-  
-      <label for="price">Price:</label>
-      <input type="number" class="price" name="price" required><br><br>
-  
-      <button type="submit" onclick="createPost()">Submit</button>
+  <!--form per l'aggiunta di un prodotto-->
+  <h1 class="p-form">Aggiungi un prodotto</h1>
+  <form id="product-form">
+    <label for="name">Name:</label>
+    <input type="text" class="name" name="name" required><br><br>
+
+    <label for="description">Description:</label>
+    <textarea class="description" name="description" required></textarea><br><br>
+
+    <label for="brand">Brand:</label>
+    <input type="text" class="brand" name="brand" required><br><br>
+
+    <label for="imageUrl">Image URL:</label>
+    <input type="url" class="imageUrl" name="imageUrl" required><br><br>
+
+    <label for="price">Price:</label>
+    <input type="number" class="price" name="price" required><br><br>
+
+    <button class="submit" type="submit" onclick="createPost()">Submit</button>
+  </form>
+  <!--form per la modifica di un prodotto-->
+  <div class="product-form-edit" style="display: none;">
+    <h2>Modifica Prodotto</h2>
+    <form id="edit-product-form">
+      <input type="hidden" id="edit-product-id" name="productId">
+      <label for="edit-name">Name:</label>
+      <input type="text" id="edit-name" name="name" required><br><br>
+
+      <label for="edit-description">Description:</label>
+      <textarea id="edit-description" name="description" required></textarea><br><br>
+
+      <label for="edit-brand">Brand:</label>
+      <input type="text" id="edit-brand" name="brand" required><br><br>
+
+      <label for="edit-imageUrl">Image URL:</label>
+      <input type="url" id="edit-imageUrl" name="imageUrl" required><br><br>
+
+      <label for="edit-price">Price:</label>
+      <input type="number" id="edit-price" name="price" required><br><br>
+
+      <button type="button" onclick="updateProduct()">Conferma Modifiche</button>
     </form>
-  
-    <div class="products-container">
-      <!-- Qui verranno aggiunti i nuovi prodotti -->
-    </div>
-  
-    <script src="backoffice.js"></script>
-  </body>
+  </div>
+
+  <div class="products-container">
+    <!-- Qui verranno aggiunti i nuovi prodotti -->
+    <div id="products-container" class="products-container"></div>
+  </div>
+
+  <script src="backoffice.js"></script>
+</body>
+
 </html>
