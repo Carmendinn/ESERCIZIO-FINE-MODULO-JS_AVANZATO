@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const url = 'https://striveschool-api.herokuapp.com/api/product/';
     const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjNhMDc5YTBiM2IyNTAwMTUxYjU0MjAiLCJpYXQiOjE3MTUyNTA5MzQsImV4cCI6MTcxNjQ2MDUzNH0.mqvTlpR7w_4ktxU6DOTWm1DKDi4jLXo27IaUrMMES3s";
     const productsContainer = document.getElementById("products-container");
-    let allProducts = [];
-
+const id= 'https://striveschool-api.herokuapp.com/api/product/${productId}'
     // Funzione per ottenere le card in pagina al caricamento
     async function fetchProducts() {
         const response = await fetch(url, {
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const productPrice = document.createElement("p");
             productPrice.className = "product-price";
-            productPrice.textContent = product.price; // Dichiaro il prezzo del prodotto
+            productPrice.textContent = product.price + " " + "€"; // Dichiaro il prezzo del prodotto
 
             // Aggiungo gli elementi al prodottoCard
             productsContainer.appendChild(productCard); // Aggiungo la scheda del prodotto al contenitore delle card

@@ -117,20 +117,21 @@ body {
     margin: auto 30px;
     width: 20%;
     height: auto;
-    border: 3px solid green;
-    border-radius: 10px;
     background-color: #ffffff;
 }
 .products-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    border-radius: 25px;
 }
 
 .product-card {
+    margin: 30px 15px;
+    width: 20%;
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
@@ -143,14 +144,16 @@ body {
     margin-bottom: 10px;
 }
 
-.product-des {
+.product-des p{
     color: #666;
     margin-bottom: 8px;
+    width: 20%;
 }
 
 .product-img {
-    width: 100px;
-    height: 100px;
+    margin: auto;
+    width: 250px;
+    height: 250px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -159,16 +162,30 @@ body {
 .product .price {
     color: #545555;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
 }
 /*backoffice*/
-.p-form {
+.home-btn{
+   
+    display: flex;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.home-btn a {
+    background-color: #ccc;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+}
+.p-form, .product-form-edit{
+    display: flex;
     margin-top: 50px;
     margin-left: 50px;
     margin-bottom: 30px;
 }
 
-#product-form {
+#product-form, .product-form-edit {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -177,15 +194,15 @@ body {
     border-radius: 5px;
 }
 
-#product-form label {
+#product-form, .product-form-edit label {
     display: block;
     margin-bottom: 5px;
 }
 
-#product-form input[type="text"],
-#product-form input[type="url"],
-#product-form input[type="number"],
-#product-form textarea {
+#product-form input, .product-form-edit input[type="text"],
+#product-form input, .product-form-edit input[type="url"],
+#product-form input, .product-form-edit input[type="number"],
+#product-form textarea, .product-form-edit textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -194,7 +211,7 @@ body {
     box-sizing: border-box;
 }
 
-#product-form button.submit {
+#product-form button.submit, .edit{
     padding: 10px 20px;
     background-color: #929292;
     color: #fff;
@@ -203,7 +220,40 @@ body {
     cursor: pointer;
 }
 
-#product-form button.submit:hover {
+#product-form button.submit:hover, .edit:hover {
     background-color: #222222;
 }
 
+/*modifiche css card backoffice*/
+.product {
+    margin-top: 20px;
+    width: 20%;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease;  
+}
+.product img{
+    width: 250px;
+    height: 250px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.product button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #929292;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product h2, .product p{
+    margin-top: 10px;
+}
+.product button.edit-btn:hover {
+    background-color: #000000;
+}
