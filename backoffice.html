@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <p class="home-btn"><a href="index.html">Home</a></p>
+  <p class="home-btn"><a href="index.html"><i class="fa-solid fa-house"></i></a></p>
   <!--form per l'aggiunta di un prodotto-->
   <h1 class="p-form">Aggiungi un prodotto</h1>
   <form id="product-form">
@@ -59,11 +59,12 @@
     </form>
     <button class="delete-btn" type="button" onclick="deleteProduct('${productId}')"></button>
   </div>
-
+  <!--qui verranno visualizzati i prodotti--> 
   <div class="products-container">
     <!-- Qui verranno aggiunti i nuovi prodotti -->
     <div id="products-container" class="products-container"></div>
   </div>
+  <script src="https://kit.fontawesome.com/5581abaa8c.js" crossorigin="anonymous"></script>
 
   <script src="backoffice.js"></script>
 </body>
